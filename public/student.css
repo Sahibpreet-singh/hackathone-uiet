@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Navbar */
+nav a {
+    transition: color 0.3s;
+}
+
+/* Buttons */
+button {
+    transition: background-color 0.3s ease;
+}
+
+/* Sections */
+section {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Past Event Cards */
+.pastevent div {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pastevent div:hover {
+    background-color: #f3f3f3;
+    transform: translateY(-5px);
+}

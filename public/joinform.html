@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Event</title>
+    <link rel="stylesheet" href="joinform.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <h2>Join the Event</h2>
+            <p>Fill in your details to get a unique number.</p>
+            <form id="joinForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn-submit">Join Now</button>
+            </form>
+            <p id="uniqueNumberDisplay"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("joinForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            try {
+                const response = await fetch("/join-event", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email })
+                });
+
+                const data = await response.json();
+                document.getElementById("uniqueNumberDisplay").innerText =
+                    data.message + ` Your unique number: ${data.uniqueNumber}`;
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
+    </script>
+
+</body>
+</html>

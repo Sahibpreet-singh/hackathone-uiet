@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family:"Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+form h1{
+    margin-top: 20px;
+}
+.login{
+    width: 420px;
+    backdrop-filter: blur(4px);
+    
+    background:transparent ;
+    box-shadow:0px 0px 10px rgb(17, 17, 17);
+    border:1px solid rgb(26, 26, 26) ;
+    color: rgb(231, 231, 231);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.login h1{
+    font-size:36px;
+    text-align: center;
+}
+.login .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+    margin : 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(19, 18, 18);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: rgb(20, 20, 20);
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    /* top: 20px; */
+    top: 30%;
+    /* transform: translateY(-0%); */
+    font-size: 20px;
+}
+
+.submit .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    box-shadow:0 0 10px solid rgba(0,0,0,.1);
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.signup{
+    margin-bottom: 40px;
+    
+}
+.submit a{
+    text-decoration: none;
+    color: #fdf7f7;
+}
+.signup a{
+    text-decoration: none;
+    color: rgb(236, 232, 232);
+    
+}  
+
+.input-box input:hover{
+    border: 2px solid #22fd16;
+    
+}

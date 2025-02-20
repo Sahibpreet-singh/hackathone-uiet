@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Equipment Management</title>
+    <link rel="stylesheet" href="resources.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Equipment Management</h1>
+    
+    <!-- Event Selection -->
+    <label for="eventId">Enter Event ID:</label>
+    <input type="text" id="eventId" placeholder="Enter Event ID">
+    <button onclick="fetchResources()">Load Resources</button>
+    
+    <!-- Add Equipment Form -->
+    <h2>Add New Equipment</h2>
+    <input type="text" id="itemName" placeholder="Equipment Name">
+    <input type="number" id="totalQuantity" placeholder="Quantity">
+    <input type="number" id="costPerItem" placeholder="Cost per Item">
+    <button onclick="addEquipment()">Add Equipment</button>
+    
+    <!-- Equipment List -->
+    <h2>Allocated Equipment</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Total Quantity</th>
+                <th>Used Quantity</th>
+                <th>Cost Per Item</th>
+                <th>Total Cost</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="resourceTableBody">
+            <!-- Equipment will be loaded here -->
+        </tbody>
+    </table>
+    
+    <!-- Cost Summary -->
+    <h2>Cost Summary</h2>
+    <p>Total Cost: $<span id="totalCost">0</span></p>
+    <p>Average Cost per Item: $<span id="avgCost">0</span></p>
+    
+    <script>
+        let resources = [];
+        
+        function fetchResources() {
+            const eventId = document.getElementById("eventId").value;
+            if (!eventId) return alert("Please enter an event ID");
+            
+            // Mock fetch request (Replace with actual API call)
+            console.log(`Fetching resources for event ID: ${eventId}`);
+            
+            // Example response
+            resources = [
+                { itemName: "Camera", totalQuantity: 5, usedQuantity: 2, costPerItem: 500 },
+                { itemName: "Microphone", totalQuantity: 3, usedQuantity: 1, costPerItem: 200 }
+            ];
+            renderResources();
+        }
+        
+        function addEquipment() {
+            const itemName = document.getElementById("itemName").value;
+            const totalQuantity = parseInt(document.getElementById("totalQuantity").value);
+            const costPerItem = parseFloat(document.getElementById("costPerItem").value);
+            
+            if (!itemName || !totalQuantity || !costPerItem) {
+                return alert("Please fill all fields");
+            }
+            
+            resources.push({ itemName, totalQuantity, usedQuantity: 0, costPerItem });
+            renderResources();
+        }
+        
+        function renderResources() {
+            const tableBody = document.getElementById("resourceTableBody");
+            tableBody.innerHTML = "";
+            let totalCost = 0, totalQuantity = 0;
+            
+            resources.forEach((resource, index) => {
+                const itemCost = resource.totalQuantity * resource.costPerItem;
+                totalCost += itemCost;
+                totalQuantity += resource.totalQuantity;
+                
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${resource.itemName}</td>
+                        <td>${resource.totalQuantity}</td>
+                        <td>${resource.usedQuantity}</td>
+                        <td>$${resource.costPerItem.toFixed(2)}</td>
+                        <td>$${itemCost.toFixed(2)}</td>
+                        <td><button onclick="useItem(${index})">Use Item</button></td>
+                    </tr>
+                `;
+            });
+            
+            document.getElementById("totalCost").innerText = totalCost.toFixed(2);
+            document.getElementById("avgCost").innerText = totalQuantity > 0 ? (totalCost / totalQuantity).toFixed(2) : "N/A";
+        }
+        
+        function useItem(index) {
+            if (resources[index].usedQuantity < resources[index].totalQuantity) {
+                resources[index].usedQuantity++;
+                renderResources();
+            } else {
+                alert("No more items available to use");
+            }
+        }
+    </script>
+</body>
+</html>

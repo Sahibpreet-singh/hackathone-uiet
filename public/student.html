@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galileo Design - Events</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../cssfile/home.css">
+
+    <!-- sidebar -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</head>
+<body class="bg-gray-100 font-['Plus Jakarta Sans']">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-10 py-4 bg-white shadow-md">
+        <div class="flex items-center gap-3">
+            <div class="size-5 text-green-600">
+                <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"></path>
+                </svg>
+            </div>
+            <h2 class="text-lg font-bold text-gray-900">UNKNOWN</h2>
+        </div>
+        <nav class="hidden md:flex gap-8 text-gray-800">
+            <a href="my-events.html" id="eventbtn" class="hover:text-green-600">Registration</a>
+            <a href="past-event.html" class="hover:text-green-600">Events</a>
+            <a href="profile.html" class="hover:text-green-600">Profile</a>
+            <a href="contact.html" class="hover:text-green-600">Contact</a>
+        </nav>
+    </header>
+    <!-- sidebar -->
+     <div class="sidebar">
+         <div id="carouselExampleCaptions" class="carousel slide">
+             <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+             </div>
+             <div class="carousel-inner">
+               <div class="carousel-item active">
+                <img src="../image1.jpg" class="d-block w-100" alt="TechSpark Hackathon" style="width: auto; height: 500px;">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg> -->
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>TechSpark Hackathon</h5>
+                   <p>A 24-hour coding competition fostering innovation and teamwork</p>
+                 </div>
+               </div>
+               <div class="carousel-item">
+                <img src="../image1.jpg" class="d-block w-100" alt="TechSpark Hackathon" style="width: auto; height: 500px;">
+                 <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg> -->
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Creative Arts Fest</h5>
+                   <p>A vibrant showcase of student talent in art, music, and theater</p>
+                 </div>
+               </div>
+               <div class="carousel-item active">
+                <img src="../image1.jpg" class="d-block w-100" alt="TechSpark Hackathon" style="width: auto; height: 500px;">
+                 <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg> -->
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Future Leaders Conference</h5>
+                   <p>An interactive event on leadership, career growth, and entrepreneurship.</p>
+                 </div>
+               </div>
+             </div>
+             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+           </div>
+</div>
+     
+
+
+
+    <!-- Dynamic Gradient Section -->
+    <section class="relative h-72 flex flex-col items-center justify-center text-white text-center px-6">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 animate-pulse"></div>
+        <h1 class="relative text-3xl md:text-5xl font-extrabold">
+            Don't miss out on the experience of a lifetime—join now and be part of something amazing!
+        </h1>
+        
+        <!-- Register Button (Centered) -->
+        <a href="events.html" class="relative mt-6 px-6 py-3 bg-green-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-green-700 transition">
+            Now Register
+        </a>
+    </section>
+    <!-- Previous Attended Events Section -->
+<section class="py-10 px-6 bg-white">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">Previous Attended Events</h2>
+    
+    <div id="eventsContainer" class="grid md:grid-cols-3 gap-6">
+        <!-- If no events are attended -->
+        <p id="noEventsMessage" class="text-gray-600 text-center w-full col-span-3">No events attended yet.</p>
+    </div>
+</section>
+    <!--  dashboread  -->
+    <section class="py-10 px-6 bg-gray-100">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">Student Dashboard</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Upcoming Event -->
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <h3 class="text-xl font-semibold text-green-600">📅 Upcoming Event</h3>
+                <p class="text-gray-700 mt-2">You are registered for <strong>TechSpark Hackathon</strong> on March 10, 2025.</p>
+                <a href="past-event.html" class="mt-4 inline-block text-blue-600 font-medium">View Details →</a>
+            </div>
+            
+            <!-- Attendance & Certificates -->
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-600">🎖 Attendance & Certificates</h3>
+                <p class="text-gray-700 mt-2">You've attended <strong>3 events</strong> so far.</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 font-medium">Download Certificates →</a>
+            </div>
+            
+            <!-- Progress Overview -->
+            <div class="p-6 bg-white shadow-lg rounded-lg">
+                <h3 class="text-xl font-semibold text-purple-600">📊 Progress Overview</h3>
+                <p class="text-gray-700 mt-2">Current Rank: <strong>#5</strong> in Event Participation</p>
+                <a href="attendance.html" class="mt-4 inline-block text-blue-600 font-medium">View Leaderboard →</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+<footer class="bg-gray-800 text-white py-10 mt-10">
+    <div class="container mx-auto grid md:grid-cols-3 gap-6 text-center md:text-left">
+        <!-- About Section -->
+        <div>
+            <h3 class="text-lg font-bold">About Us</h3>
+            <p class="text-sm mt-2">Galileo Design provides a platform for students to explore, learn, and participate in diverse events.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-bold">Quick Links</h3>
+            <ul class="text-sm mt-2 space-y-1">
+                <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                <li><a href="#" class="hover:text-blue-400">Events</a></li>
+                <li><a href="#" class="hover:text-blue-400">Profile</a></li>
+                <li><a href="#" class="hover:text-blue-400">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Contact Information -->
+        <div>
+            <h3 class="text-lg font-bold">Contact</h3>
+            <p class="text-sm mt-2">Email: support@galileodesign.com</p>
+            <p class="text-sm">Phone: +123 456 7890</p>
+        </div>
+    </div>
+    <div class="text-center mt-6 text-sm">
+        <p>© 2025 Galileo Design. All Rights Reserved.</p>
+    </div>
+</footer>
+    
+
+</body>
+</html>
+    
+    
+    
+    

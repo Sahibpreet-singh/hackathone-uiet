@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="create.css">
+    <title>Create a Match</title>
+    
+
+</head>
+<body>
+    <div class="content">
+        <div class="img"></div>
+
+        <div class="middle">
+            <div class="innermiddleimg">
+                <img src="event.webp" alt="image">
+            </div>
+
+            <div class="innermiddle">
+                <div class="formfil">
+                    <div class="headtext">
+                        <h2>Event details</h2>
+                    </div>
+
+                    <div class="formcontent">
+                        <form id="eventForm">
+                            <label for="event-date">Event Date:</label>
+                            <div class="input-container">
+                                <input type="date" id="event-date" name="event-date" required>
+                            </div>
+
+                            <label for="event-time">Event Time:</label>
+                            <div class="input-container">
+                                <input type="time" id="event-time" name="event-time" required>
+                            </div>
+
+                            <label for="event-place">Event Place:</label>
+                            <div class="input-container">
+                                <input type="text" id="event-place" name="event-place" required>
+                            </div>
+                            
+                            <label for="event-name">Event name:</label>
+                            <div class="input-container">
+                                <input type="text" id="event-name" name="event-name" required>
+                            </div>
+                            
+                            <button type="submit">Create Event</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

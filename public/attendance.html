@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Attendance Leaderboard</h2>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Attendance</th>
+            </tr>
+        </thead>
+        <tbody id="attendanceTable">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    async function fetchAttendanceData() {
+        const response = await fetch("/attendance-analysis");
+        const students = await response.json();
+
+        const tableBody = document.getElementById("attendanceTable");
+        tableBody.innerHTML = ""; // Clear table
+
+        students.forEach((student, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${student.name}</td>
+                <td>${student.email}</td>
+                <td><span class="badge bg-${student.attendance >= 3 ? 'success' : 'danger'}">
+                    ${student.attendance}
+                </span></td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    fetchAttendanceData();
+</script>
+
+</body>
+</html>

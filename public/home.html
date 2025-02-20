@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galileo Design - Events</title>
+    <script src="script.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../cssfile/home.css">
+</head>
+<body class="bg-gray-100 font-['Plus Jakarta Sans']">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-10 py-4 bg-white shadow-md">
+        <div class="flex items-center gap-3">
+            <div class="size-5 text-green-600">
+                <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"></path>
+                </svg>
+            </div>
+            <h2 class="text-lg font-bold text-gray-900">UNKNOWN</h2>
+        </div>
+        <nav class="hidden md:flex gap-8 text-gray-800">
+            <a href="#" class="hover:text-green-600">Home</a>
+            <a href="#" class="hover:text-green-600">Events</a>
+            <a href="#" class="hover:text-green-600">Contact</a>
+        </nav>
+        <div class="flex gap-3">
+            <button class="px-4 py-2 text-white bg-green-600 rounded-full hover:bg-green-700">Sign Up</button>
+            <button class="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Log In</button>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="relative flex flex-col-reverse md:flex-row items-center justify-center bg-white shadow-md rounded-lg m-5 p-5">
+        <div class="md:w-1/2">
+            <img src="../abc.jpeg" alt="Event" class="rounded-lg shadow-md w-full">
+        </div>
+        <div class="md:w-1/2 text-center md:text-left p-5">
+            <h1 class="text-3xl font-bold text-gray-900">Your Next Adventure Starts Here</h1>
+            <p class="text-gray-600 mt-2">Join us for an unforgettable experience. Sign up for an event today!</p>
+            <button class="mt-4 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700">
+                Sign Up
+            </button>
+        </div>
+    </section>
+
+   
+   <!-- Past Events Section -->
+<!-- Past Events Section -->
+<section class="m-5 p-5 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold text-gray-900 text-center">Past Events</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+        <!-- Event 1 -->
+        <div class="p-4 bg-gray-100 rounded-lg shadow-sm text-center">
+            <h3 class="font-semibold text-lg text-gray-900">Tech Innovators 2024</h3>
+            <img src="https://source.unsplash.com/400x250/?tech,conference" alt="Tech Fest" class="rounded-lg mt-2">
+            <p class="text-sm text-gray-600 mt-2">A festival celebrating innovation and creativity in technology.</p>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="p-4 bg-gray-100 rounded-lg shadow-sm text-center">
+            <h3 class="font-semibold text-lg text-gray-900">Cultural Vibes Night</h3>
+            <img src="https://source.unsplash.com/400x250/?concert,festival" alt="Cultural Fest" class="rounded-lg mt-2">
+            <p class="text-sm text-gray-600 mt-2">An exciting night filled with music, dance, and cultural performances.</p>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="p-4 bg-gray-100 rounded-lg shadow-sm text-center">
+            <h3 class="font-semibold text-lg text-gray-900">Entrepreneurship Summit</h3>
+            <img src="https://source.unsplash.com/400x250/?business,seminar" alt="Entrepreneurship Event" class="rounded-lg mt-2">
+            <p class="text-sm text-gray-600 mt-2">A gathering of young entrepreneurs, investors, and industry leaders.</p>
+        </div>
+    </div>
+
+    <!-- Explore Events Button -->
+    <div class="flex justify-center mt-6">
+        <button class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+           <a href="events.html"> Explore Events</a>
+        </button>
+    </div>
+</section>
+<!-- About Us Section -->
+<section class="m-5 p-5 bg-white rounded-lg shadow-md flex flex-col md:flex-row items-center">
+    <!-- Left Side: Text Content -->
+    <div class="md:w-1/2 text-center md:text-left p-5">
+        <h2 class="text-3xl font-bold text-gray-900">About Us</h2>
+        <p class="text-gray-600 mt-3">
+            Welcome to our event platform, where we bring together students, professionals, and enthusiasts to celebrate 
+            learning, creativity, and collaboration. Our events range from technology summits and cultural fests to 
+            entrepreneurship workshops and fun networking nights.
+        </p>
+        <p class="text-gray-600 mt-2">
+            Join us in making unforgettable memories, learning from the best, and shaping the future together.
+        </p>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="md:w-1/2 p-5 flex justify-center">
+        <img src="../Hero-1.webp" alt="About Us - Events" class="rounded-lg shadow-md">
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-6 mt-10">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-5">
+        <!-- Left: Logo & About -->
+        <div class="text-center md:text-left mb-4 md:mb-0">
+            <h3 class="text-2xl font-bold">Galileo Design</h3>
+            <p class="text-sm text-gray-400 mt-2">Creating unforgettable events for students and professionals.</p>
+        </div>
+
+        <!-- Center: Navigation Links -->
+        <div class="flex space-x-6 text-sm">
+            <a href="#" class="hover:text-gray-400">Home</a>
+            <a href="#" class="hover:text-gray-400">Events</a>
+            <a href="#" class="hover:text-gray-400">About Us</a>
+            <a href="#" class="hover:text-gray-400">Contact</a>
+        </div>
+
+        <!-- Right: Social Media Icons -->
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-400">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="hover:text-gray-400">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="hover:text-gray-400">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="hover:text-gray-400">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom: Copyright -->
+    <div class="text-center text-sm text-gray-500 mt-4">
+        © 2025 Galileo Design. All Rights Reserved.
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

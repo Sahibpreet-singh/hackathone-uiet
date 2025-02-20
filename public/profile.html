@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Student Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#1C160C]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-[#1C160C] text-lg font-bold leading-tight tracking-[-0.015em]">Student Dashboard</h2>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="flex p-4 @container">
+              <div class="flex w-full flex-col gap-4 items-center">
+                <div class="flex gap-4 flex-col items-center">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/56f5727c-d429-4760-b591-93a01056096e.png");'
+                  ></div>
+                  <div class="flex flex-col items-center justify-center">
+                    <p id="user-name" class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center"></p>
+                    <p id="user-email" class="text-[#A18249] text-base font-normal leading-normal text-center"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+           
+  
+
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const userId = "USER_ID_HERE"; // Replace with actual logged-in user ID
+      const response = await fetch(`/api/user-profile?id=${userId}`);
+      const data = await response.json();
+
+      if (response.ok) {
+        document.getElementById("user-name").innerText = data.name;  // Use correct ID
+        document.getElementById("user-email").innerText = data.email;  // Use correct ID
+      } else {
+        console.error("Error fetching user:", data.message);
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+  });
+
+
+
+
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
